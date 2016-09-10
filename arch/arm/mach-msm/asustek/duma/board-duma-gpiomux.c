@@ -1514,7 +1514,7 @@ static struct msm_gpiomux_config gpio_bat_low_configs[] __initdata = {
 		},
 	},
 };
-/*
+
 #ifdef CONFIG_SENSORS_CAP1106
 static struct gpiomux_setting gpio_cap1106_active_cfg = {
 	.func = GPIOMUX_FUNC_GPIO,
@@ -1536,7 +1536,7 @@ static struct msm_gpiomux_config gpio_cap1106_cfgs[] __initdata = {
 	},
 };
 #endif 
-*/
+
 static struct gpiomux_setting ts_init_config = {
         .func = GPIOMUX_FUNC_GPIO,
         .drv  = GPIOMUX_DRV_2MA,
@@ -1869,10 +1869,10 @@ msm_gpiomux_install(smb345_pin_configs,
 			ARRAY_SIZE(apq8064_sdc3_configs));
 #endif
 #ifdef CONFIG_SENSORS_CAP1106
-/*	if (machine_is_apq8064_duma()) {
+	if (machine_is_apq8064_duma()) {
 		msm_gpiomux_install(gpio_cap1106_cfgs,
 			ARRAY_SIZE(gpio_cap1106_cfgs));
-	}*/
+	}
 #endif
 	
 	//add touch
