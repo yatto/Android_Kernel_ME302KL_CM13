@@ -271,7 +271,7 @@ static int __init pcbid_driver_probe(struct platform_device *pdev)
 			pr_info("ASUSTek: Requesting gpio%d for %s\n",
 					res->start, res->name);
 
-		if (machine_is_apq8064_flo() || machine_is_apq8064_deb() || machine_is_apq8064_duma()) {
+		if (machine_is_apq8064_flo() || machine_is_apq8064_deb()) {
 			if ((asustek_hw_rev == HW_REV_C) ||
 				(asustek_hw_rev == HW_REV_D) ||
 				(asustek_hw_rev == HW_REV_E)) {
